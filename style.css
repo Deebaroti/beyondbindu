@@ -127,6 +127,9 @@ header .navbar{
     background: var(--secondary-color);
 
 }
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
 
 /* About section */
 .social-link-list{
@@ -301,7 +304,7 @@ header{
 /*HERO SECTION*/
 .hero-section {
     min-height: 100vh;
-    background: var(--primary-color);
+    background: black;
 }
 
 .hero-section .section-content{
@@ -329,11 +332,83 @@ header{
     margin: 24px 0 40px;
     font-size: var(--font-size-m);
 }
+
+.hero-section .hero-details .buttons{
+    display: flex;
+    gap: 23px;
+}
+
 .hero-section .hero-details .button{
     padding: 10px 26px;
     border: 2px solid transparent;
-    color: var(--primary-color);
+    color: var(--white-color);
     border-radius: var(--border-radius-m);
     background: var(--secondary-color);
     font-weight: var(--font-weight-medium);
+}
+
+.hero-section .hero-details .button:hover,.hero-section .hero-details .UPCOMING-EVENTS{
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+
+}
+
+.hero-section .hero-details .UPCOMING-EVENTS:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: var(--secondary-color);
+
+}
+
+.hero-section .hero-details-wrapper{
+    max-width: 500px;
+    margin-right: 30px;
+
+}
+/*Responsive media query codo for max width 900px*/
+@media  screen and (max-width:900px) {
+    :root{
+        --font-size-m: 1rem;
+        --font-size-1: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    .navbar :where(#menu-close-button, #menu-open-button){
+        display: block;
+        font-size: var(--font-size-1);
+    }
+
+    .navbar #menu-close-button{
+        position: absolute;
+        right: 30px;
+        top:30px;
+    }
+
+    .navbar .nav-menu{
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-color);
+        transition: left 0.2s ease;
+    }
+
+    .body.show-mobile-menu.navbar.nav-menu{
+        left: 0;
+    }
+    
+    .navbar .nav-menu .nav-link{
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-1);
+    }    
 }

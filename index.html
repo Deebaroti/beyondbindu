@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond bindu</title>
+    <!-- Linking Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +16,9 @@
                 <h2 class="logo-text"></h2> 
             </a>
             <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
@@ -21,7 +26,7 @@
                     <a href="#" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Testimonials</a>
+                    <a href="#" class="nav-link">Team Members</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Gallery</a>
@@ -30,6 +35,8 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
         </nav>
     </header>
     <main>
@@ -62,14 +69,16 @@
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, itaque pariatur! Et dolorem aperiam, vitae dosunt molestias et asperiores? Esse, molestias? Tempore!</p>
                     <div class="buttons">
                         <a href="#" class="button NEWS">NEWS</a>
-                        <a href="#" class="button UPCOMING EVENTS">UPCOMING EVENTS</a>
+                        <a href="#" class="button UPCOMING-EVENTS">UPCOMING EVENTS</a>
                     </div>
                 </div> 
                 <div class="hero-image-wrapper">
-                    <img src="images\theatre.jpg" alt="Hero" class="hero-image">
+                    <img src="theatre1.jpg" alt="Hero" class="hero-image">
                 </div>            
             </div>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
