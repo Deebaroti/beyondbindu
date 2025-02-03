@@ -104,6 +104,15 @@ header{
     padding: 10px 0;
 }
 
+header img {
+    width: 120px; /* Increase the logo size */
+    height: auto;
+    border-radius: 20%; /* Optional: Makes the logo round if it's square */
+    background-color: #ffeb3b; /* Adds a yellow background */
+    padding: 2px; /* Adds some space around the logo */
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.8); /* Adds a yellow glow effect */
+  }
+
 header .navbar{
     display: flex;
     padding: 20px;
@@ -281,6 +290,60 @@ header .navbar{
     color: var(--secondary-color);
     align-items: center;
 }
+
+/*testimonals section styling*/
+.testimonisals-section{
+    padding: 50px 0 100px;
+    background: var(--light-pink-color);
+}
+
+.testimonials-section .slide-wrapper{
+    overflow: hidden;
+    margin: 0 60px 50px;
+}
+
+.testimonials-section .testimonial{
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name{
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+}
+
+.testimonials-section .testimonial .feedback{
+    line-height: 25px;
+}
+
+.testimonials-section .swipe-pagination-bullet{
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+.testimonials-section .swiper-slide-button{
+    margin-top: -50px;
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.testimonials-section .swiper-slide-button:hover{
+    color: var(--primary-color);
+}
+
 
 @media screen and (max-width: 900px){
     :root{
@@ -495,5 +558,13 @@ header {
     .hero-section .hero-image-wrapper{
         max-width: 270px;
         margin-right: 0;
+    }
+
+    .testimonials-section .slide-wrapper{
+        margin: 0 0 30px;    
+    }
+
+    .testimonials-section .swiper-slide-button{
+        display: none;
     }
 }

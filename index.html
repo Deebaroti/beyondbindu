@@ -6,6 +6,8 @@
     <title>Beyond bindu</title>
     <!-- Linking Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--linking swipper css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -90,8 +92,48 @@
             </div>
          </section>
         </section>
-    </main>
 
+        <!--tesimonals section-->
+        <section class="testimonials-section">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="section-content">
+                <div class="slider-container swiper">
+                    <div class="slider-wrapper">
+                        <ul class="testimonials-list swiper-wrapper">
+                            <li class="testimonial swiper-slide">
+                                <img src="img1.jpg" alt="user" class="user-image">
+                                <h3 class="name">Simon Laherty</h3>
+                                <i class="feedback">Ladies and Gentleman my name is Simon Maurice Laherty. I have been with the acting ensemble since 2003. We’re all actors and we all can act. Lucky, I’m no good at office work. Meetings can get boring but they have to get done. The Artistic Director is hard. He’s hard on the actors. The best thing that ever happened to me in my life was my grandfather giving me his medals when I turned 21.</i>
+                            </li>
+                            <li class="testimonial swiper-slide">
+                                <img src="img2.jpg" alt="user" class="user-image">
+                                <h3 class="name">Sarah Mainwaring</h3>
+                                <i class="feedback">My name is Sarah Mainwaring and I have been working with Back to Back since 2006. Being part of the ensemble has been rewarding. Their artistic standard and depth of comprehension is impressive and that empowers me to do great work.</i>
+                            </li>
+                            <li class="testimonial swiper-slide">
+                                <img src="img3.jpg" alt="user" class="user-image">
+                                <h3 class="name">Scott Price</h3>
+                                <i class="feedback">Hello audience, I’m Scott Price and a member of the ensemble. I’ve been working here since 2007.</i>
+                            </li>
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                          <!-- If we need navigation buttons -->
+                           <div class="swiper-slide-button
+                           swiper-button-prev"></div>
+                            <div class="swiper-slide-button
+                            swiper-button-next"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!--linking swipper script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--linking custom script-->
     <script src="script.js"></script>
 </body>
 </html>
