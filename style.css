@@ -71,9 +71,11 @@ button{
     background: none;
 }
 
-#menu-open-button, 
+#menu-open-button{
+    color: white;
+} 
 #menu-close-button {
-    color: white; /* Changes the icon color to white */
+    color: black; /* Changes the icon color to white */
 }
 
 
