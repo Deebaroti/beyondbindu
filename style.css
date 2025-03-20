@@ -24,9 +24,9 @@
     /* colours */
     --white-color: #fcf8f8;
     --dark-color: #252525;
-    --primary-color: #054fda;
-    --secondary-color: #c41c1c;
-    --light-pink-color: #78a5e4;
+    --primary-color: #b3b311;
+    --secondary-color: rgb(242, 195, 8);
+    --light-pink-color: #feffff;
     --mediun-gray-color: #0a0909;
     
     /* font size */
@@ -120,7 +120,7 @@ header img {
     width: 120px; /* Increase the logo size */
     height: auto;
     border-radius: 20%; /* Optional: Makes the logo round if it's square */
-    background-color: #ffeb3b; /* Adds a yellow background */
+    background-color: #b3b311; /* Adds a yellow background */
     padding: 2px; /* Adds some space around the logo */
     box-shadow: 0 0 20px rgba(255, 193, 7, 0.8); /* Adds a yellow glow effect */
   }
@@ -133,7 +133,7 @@ header .navbar{
 }
 
 .navbar .nav-logo .logo-text{
-    color: var(--white-color);
+    color: black;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
 }
@@ -153,7 +153,7 @@ header .navbar{
 }
 
 .navbar .nav-menu .nav-link:hover{
-    color: var(--primary-color);
+    color: black;
     background:var(--light-pink-color);
 
 }
@@ -168,7 +168,7 @@ header .navbar{
 }
 
 .social-link-list a{
-    background-color: #054fda;
+    background-color: #b3b311;
     padding: 1em;
     border-radius: 50%;
     height: 64px;
@@ -231,7 +231,7 @@ header .navbar{
 }
 
 .social-link-list a {
-    background-color: #054fda;
+    background-color: #b3b311;
     padding: 0.5em; /* Decrease padding to reduce the size of the boundary */
     border-radius: 50%; /* Keeps it circular */
     height: 48px; /* Decrease height */
@@ -357,6 +357,61 @@ header .navbar{
     color: var(--primary-color);
 }
 
+/* Blog Section Styling 
+#blog {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(96, 146, 221);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+}
+
+#blog h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+#blog textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: vertical;
+    background: whitesmoke;
+}
+
+#blog button {
+    padding: 10px 60px;
+    background: #28a745;
+    color: rgb(11, 11, 11);
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+#blog button:hover {
+    background: #218838;
+}
+
+#blogSection {
+    margin-top: 20px;
+}
+
+.blog-post {
+    padding: 10px;
+    border-left: 5px solid #28a745;
+    margin-top: 10px;
+    text-align: left;
+    border-radius: 5px;
+}
+*/
+
 
 @media screen and (max-width: 900px){
     :root{
@@ -391,16 +446,19 @@ header{
     min-height: 100vh;
 }
 
-.hero-background{
-    background-image: url('headlights.jpg'); /* Replace with actual image */
-    background-size: cover;
-    background-position: center top; /* Ensures the top of the image is visible */
+.hero-background {
+    background-image: url('3a375f2c-a63a-46c2-aa99-baf878e860e9 (1).jpg');
+    background-size: cover; /* Covers the whole screen without stretching */
+    background-position: center center; /* Centers the image horizontally and vertically */
     background-repeat: no-repeat;
-    height: 100vh; /* Covers full viewport height */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
+
 
 /* Make sure header has a transparent background */
 header {
@@ -418,7 +476,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--black-color);
+    color: white;
     text-align: center;
     flex-direction: column;
 }
@@ -432,8 +490,8 @@ header {
 
 .hero-section .hero-details .title{
     font-size:var(--font-size-xxl);
-    color: var(--secondary-color);
-    font-family: "Miniver", sans-serif;
+    color:white;
+    font-family: sans-serif;
 }
 
 .hero-details .hero-details .subtitle{
@@ -537,7 +595,7 @@ header {
     padding: 0 12px;
     outline: none;
     margin-bottom: 16px;
-    background: var(--white-color);
+    background: rgb(246, 246, 210);
     border-radius: var(--border-radius-s);
     border: 1px solid var(--mediun-gray-color);
 }
@@ -559,17 +617,17 @@ header {
 .contact-section .contact-form .submit-button{
     padding: 10px 26px;
     margin-top: 10px;
-    color: var(--white-color);
+    color: black;
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-medium);
     background: var(--primary-color);
     border-radius: var(--border-radius-m);
-    border: 1px solid var(--primary-color);
+    border: 1px solid black;
     transition: 0.3s ease;
 }
 
 .contact-section .contact-form .submit-button:hover{
-    background: var(--primary-color);
+    background: gray;
     background: transparent;
 }
 
