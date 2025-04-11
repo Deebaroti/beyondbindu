@@ -3,7 +3,7 @@
 *{  margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Emerland Serif";
+    font-family: "Sans Serif";
 }
 
 .hello{
@@ -12,7 +12,7 @@
     left: 10px; /* Adjusts distance from the left */
     width: 55px; /* Keeps the logo size consistent */
     z-index: 1000; /* Ensures the logo stays above other elements */
-    background: white;
+    background: transparent;
 }
 
 #home{

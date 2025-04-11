@@ -175,16 +175,14 @@
                     </li>
                 </ul>
 
-                <form action="#" class="contact-form">
-                   <input type="text" placeholder="Your name" class="form-input"
-                   required>
-                   <input type="email" placeholder="Your email" class="form-input"
-                   required>
-                   <textarea placeholder="Your message" class="form-input"
-                   required></textarea>
-                   <button class="submit-button">Submit</button>
-
+                <form action="/submit-form" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Your name" class="form-input" required>
+                    <input type="email" name="email" placeholder="Your email" class="form-input" required>
+                    <textarea name="message" placeholder="Your message" class="form-input" required></textarea>
+                    <button type="submit" class="submit-button">Submit</button>
                 </form>
+                
+                  
             </div>
         </section>
 
