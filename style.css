@@ -565,6 +565,59 @@ header {
     transform: scale(1.3);
 }
 
+/* gallery-detail-1.html <style> tag OR style.css */
+
+/* Lightbox Styles */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Ensure it's on top */
+    padding: 20px;
+}
+
+#lightbox-image-display {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close-button:hover {
+    color: #bbb;
+}
+
+/* Background Blur Effect */
+.blur-background > *:not(.lightbox-overlay) { /* Blur everything EXCEPT the lightbox itself */
+    filter: blur(5px);
+    transition: filter 0.3s ease-out;
+}
+/* Ensure the lightbox overlay itself is not blurred if the body has the class */
+.blur-background .lightbox-overlay {
+    filter: none !important; /* Important to override if body has blur */
+}
+
+/* Make gallery images clickable in sub-gallery */
+#detail-gallery-1 .gallery-item .gallery-image {
+    cursor: pointer; /* Indicates it's clickable */
+}
+
 /* Contact us section styling */
 .contact-section{
     padding: 50px 0 100px;

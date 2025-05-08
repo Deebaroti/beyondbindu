@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail-gallery-1</detail-gallery1></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Optional: Add specific styles for detail pages if needed */
+        .back-button-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            text-decoration: none;
+            border-radius: var(--border-radius-s);
+            font-size: var(--font-size-n);
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="dexlabs demo logo.png" class="hello">
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo"> 
+                <h2 class="logo-text"></h2>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#gallery" class="nav-link">Back to Main Gallery</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-section" id="detail-gallery-1" style="padding-top: 100px;"> 
+            <h2 class="section-title">Detailed View: Project Name</h2>
+            
+            <div class="back-button-container">
+                <a href="index.html#gallery" class="back-button">Back to Main Gallery</a>
+            </div>
+
+            <div class="section-content">
+                <ul class="gallery-list">
+                    <li class="gallery-item">
+                        <img src="tamed psycho slide 2 final.png" alt="Detail Image 2" class="gallery-image">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="section-content">
+            <p class="copyright-text">@ DEXLabs Agency</p>
+            <div class="social-link-list">
+            </div>
+            <p class="policy-text">
+                <a href="#" class="policy-link">Privacy policy</a>
+            </p>
+        </div>
+    </footer>
+<!-- Lightbox Modal HTML -->
+<div id="lightbox-overlay" class="lightbox-overlay">
+    <span class="lightbox-close-button">×</span>
+    <img src="" alt="Enlarged Image" id="lightbox-image-display">
+</div>
+
+<script src="script.js"></script>
+<!-- Add script for lightbox functionality on this page -->
+<script>
+    // Lightbox specific script for this page
+    document.addEventListener('DOMContentLoaded', () => {
+        const galleryImages = document.querySelectorAll('#detail-gallery-1 .gallery-item .gallery-image');
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxImageDisplay = document.getElementById('lightbox-image-display');
+        const lightboxCloseButton = document.querySelector('.lightbox-close-button');
+        const bodyElement = document.body;
+
+        galleryImages.forEach(image => {
+            image.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default if image is wrapped in <a>
+                const imageSrc = this.getAttribute('src');
+                lightboxImageDisplay.setAttribute('src', imageSrc);
+                lightboxOverlay.style.display = 'flex'; // Use flex for centering
+                bodyElement.classList.add('blur-background');
+            });
+        });
+
+        function closeLightbox() {
+            lightboxOverlay.style.display = 'none';
+            lightboxImageDisplay.setAttribute('src', ''); // Clear image
+            bodyElement.classList.remove('blur-background');
+        }
+
+        lightboxCloseButton.addEventListener('click', closeLightbox);
+
+        // Optional: Close lightbox when clicking on the overlay (outside the image)
+        lightboxOverlay.addEventListener('click', function(event) {
+            if (event.target === lightboxOverlay) { // Clicked on overlay itself
+                closeLightbox();
+            }
+        });
+
+        // Optional: Close lightbox with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && lightboxOverlay.style.display === 'flex') {
+                closeLightbox();
+            }
+        });
+    });
+</script>
+</body>
+</html>
